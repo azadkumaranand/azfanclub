@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="afree_logo.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    
+    <title>AzClub</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="afree_logo.png" alt="">
+            <span>AzClub</span>
+        </div>
+        <div class="playlist" id="playlist">
+            More Song
+        </div>
+    </div>
+    <div class="container">
+        
+        <div class="musicbackground">
+            <div class="songlistimg">
+                
+                <img src="" alt="">
+                <img class="gifstart" src="playing.gif" alt="">
+            </div>
+            <div class="songlists">
+                <div class="hidelist">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+            
+            
+        </div>
+        <div class="tools">
+            <audio id="mainAudio" src=""></audio>
+            <div class="progress-area">
+                <div class="myProgressBar">
+                    
+                </div>
+            </div>
+            <div class="tool">
+                <span class="songcurrenttime">0:00</span>
+                <i id="back" class="fa-solid fa-backward"></i>
+                <i id="play_pause" class="fa-solid fa-play"></i>
+                <i id="next" class="fa-solid fa-forward"></i>
+                <span class="songduration">3:45</span>
+            </div>
+        </div>
+        
+    </div>
+    <script src="music_list.js"></script>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/8505550afa.js" crossorigin="anonymous"></script>
+</body>
+</html>
