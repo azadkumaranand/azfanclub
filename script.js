@@ -6,7 +6,7 @@ next = document.getElementById('next'),
 gifstart = document.querySelector('.gifstart'),
 playlist = document.getElementById('playlist'),
 hidelist = document.querySelector('.hidelist');
-
+let gleary = document.querySelector('.gleary');
 const audioImg = document.querySelector('.songlistimg img'),
 songduration = document.querySelector('.songduration'),
 songcurrenttime = document.querySelector('.songcurrenttime'),
@@ -81,7 +81,7 @@ progressArea.addEventListener('click',(e)=>{
     let progressWidth = progressArea.clientWidth; //getting width of progress bar
     let clickedOffsetX = e.offsetX; //getting offset x value
     let songDuration = mainAudio.duration; //getting song total duration
-    // console.log(songDuration);
+    //console.log(songDuration);
     mainAudio.currentTime = (clickedOffsetX / progressWidth) * songDuration;
     let progressWidth1 = (mainAudio.currentTime / songDuration) * 100;
     myProgressBar.style.width = `${progressWidth1}%`
@@ -162,7 +162,6 @@ function playingSong(){
         audioTag.innerText = adDuration;
       }
       let test = allLiTag[j].getAttribute("val");
-      console.log(test);
       //if the li tag index is equal to the musicIndex then add playing class in it
       if(allLiTag[j].getAttribute("val") == musicIndex){
         allLiTag[j].classList.add("playing");
@@ -181,3 +180,14 @@ function clicked(element){
     playingSong();
     gifstart.style.opacity = '1'
 }
+
+// write code for gleary
+quotes.forEach((element)=>{
+    let image = `
+    <div class="quotes ${element.id}">
+        <img src="${element.quotespath}" onclick="viewImg(i)" alt="quotes">
+    </div>
+        `
+    gleary.insertAdjacentHTML('beforeend', image);
+    
+})
