@@ -126,29 +126,30 @@ play_pause.addEventListener('click',()=>{
     }
     playingSong();
 });
-
-songs.forEach((element, i) => {
-    let listelement = `
-        <div class="songlist" val="${i+1}">
-            <span class="songimg"><img src="${element.coverPath}"></span>
-            <span class="songname">${element.songName}</span>
-            <span id="${element.id}" class="audio-duration">3:00</span>
-            <audio class="${element.id}" src="${element.filePath}"></audio>
-        </div>
-    `
-    songlists.insertAdjacentHTML('beforeend', listelement);
-    let lsDuration = songlists.querySelector(`#${element.id}`);
-    let audioTag = songlists.querySelector(`.${element.id}`);
-    
-    audioTag.addEventListener('loadeddata', ()=>{
-        let setLsDuration = audioTag.duration;
+window.addEventListener('load',()=>{
+    songs.forEach((element, i) => {
+        let listelement = `
+            <div class="songlist" val="${i+1}">
+                <span class="songimg"><img src="${element.coverPath}"></span>
+                <span class="songname">${element.songName}</span>
+                <span id="${element.id}" class="audio-duration">3:00</span>
+                <audio class="${element.id}" src="${element.filePath}"></audio>
+            </div>
+        `
+        songlists.insertAdjacentHTML('beforeend', listelement);
+        let lsDuration = songlists.querySelector(`#${element.id}`);
+        let audioTag = songlists.querySelector(`.${element.id}`);
         
-        let totalmin = Math.floor(setLsDuration/60);
-        let totalsec = Math.floor(setLsDuration%60);
-        lsDuration.innerText = `${totalmin}:${totalsec}`;
-        lsDuration.setAttribute("t-duration", `${totalmin}:${totalsec}`);
+        audioTag.addEventListener('loadeddata', ()=>{
+            let setLsDuration = audioTag.duration;
+            
+            let totalmin = Math.floor(setLsDuration/60);
+            let totalsec = Math.floor(setLsDuration%60);
+            lsDuration.innerText = `${totalmin}:${totalsec}`;
+            lsDuration.setAttribute("t-duration", `${totalmin}:${totalsec}`);
+        })
+        
     })
-    
 })
 
 function playingSong(){
