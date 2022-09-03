@@ -6,7 +6,8 @@ next = document.getElementById('next'),
 gifstart = document.querySelector('.gifstart'),
 playlist = document.getElementById('playlist'),
 hidelist = document.querySelector('.hidelist');
-let gleary = document.querySelector('.gleary');
+let gleary = document.querySelector('.gleary'),
+showquotes = document.querySelector('#showquotes');
 const audioImg = document.querySelector('.songlistimg img'),
 songduration = document.querySelector('.songduration'),
 songcurrenttime = document.querySelector('.songcurrenttime'),
@@ -190,4 +191,8 @@ quotes.forEach((element)=>{
         `
     gleary.insertAdjacentHTML('beforeend', image);
     
+})
+
+showquotes.addEventListener('click', ()=>{
+    gleary.style.display = "flex";
 })

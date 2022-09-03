@@ -78,20 +78,16 @@
 }
 
 .songlists {
-    height: 400px;
-    /* width: 50%; */
-    margin: 5px;
+    height: 70vh;
     display: none;
     justify-content: center;
     flex-direction: column;
-    /* overflow-x: hidden; */
-    overflow-y: scroll;
-    
+    overflow: auto;
     padding: 10px;
     position: fixed;
     right: 10px;
     top: 72px;
-    padding-top: 1550px;
+    padding-top: 180px;
 }
 
 .songlist {
@@ -150,7 +146,7 @@ footer{
     height: 70px;
 }
 .gleary{
-    display: flex;
+    display: none;
     justify-content: center;
     width: 100%;
     height: auto;
