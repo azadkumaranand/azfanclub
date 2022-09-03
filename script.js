@@ -32,7 +32,7 @@ playlist.addEventListener('click',()=>{
 
 hidelist.addEventListener('click',()=>{
     songlists.style.display = "none";
-    playlist.innerText = "More Songs";
+    playlist.innerHTML = `<img src="covers/list.jpg" alt="">`;
 })
 
 function playMusic(){

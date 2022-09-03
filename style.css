@@ -17,7 +17,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url("bgg..webp");
+    background-image: url("bgm.jpg");
     background-size: cover;
 }
 .container a{
@@ -58,7 +58,9 @@
     font-family: 'Ubuntu', sans-serif;
     cursor: pointer;
 }
-
+.playlist img{
+    height: 20px;
+}
 .logo span{
     padding-left: 10px;
     font-size: 23px;
