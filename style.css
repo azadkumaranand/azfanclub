@@ -83,8 +83,8 @@
 }
 
 .songlists {
-    height: 525vh;
-    width: 95%;
+    height: 80vh;
+    /* width: 95%; */
     display: none;
     justify-content: center;
     flex-direction: column;
@@ -264,6 +264,10 @@ footer{
     }
     .container{
         background-image: url('bg0.jpg');
+    }
+    .songlists{
+        height: 525vh;
+        width: 95%;
     }
 }
 @media(max-width: 520px){
